@@ -1,0 +1,240 @@
+<templateSet group="RenPy">
+    <template name="region" value="#region $REGION_NAME$&#10;$END$&#10;#endregion $REGION_NAME$" description="Create a new folding region." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="REGION_NAME" expression="" defaultValue="Region name" alwaysStopAt="true"/>
+    </template>
+
+    <template name="label" value="label $LABEL_NAME$:&#10;&#009;$END$" description="Create a new label." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="LABEL_NAME" expression="" defaultValue="label_name" alwaysStopAt="true"/>
+    </template>
+
+    <template name="jump" value="jump $LABEL_NAME$" description="Jump to a label." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="LABEL_NAME" expression="" defaultValue="label_name" alwaysStopAt="true"/>
+    </template>
+
+    <template name="call" value="call $LABEL_NAME$" description="Call a label." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="LABEL_NAME" expression="" defaultValue="label_name" alwaysStopAt="true"/>
+    </template>
+
+    <template name="pause" value="with Pause($SECONDS$)&#10;$END$" description="Wait a few seconds before showing the next screen." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="SECONDS" expression="" defaultValue="" alwaysStopAt="true"/>
+    </template>
+
+    <template name="p1" value="$ $PYTHON_STATEMENTS$" description="Execute a single line of Python." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="PYTHON_STATEMENTS" expression="" defaultValue="#python statements" alwaysStopAt="true"/>
+    </template>
+
+    <template name="py" value="python:&#10;&#009;$END$" description="The python statement takes a block of python code." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="init" value="init $PRIORITY$:&#10;&#009;$END$" description="Run code at initialization time." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="PRIORITY" expression="" defaultValue="#priority number" alwaysStopAt="true"/>
+    </template>
+
+    <template name="inipy" value="init $PRIORITY$ python:&#10;&#009;$END$" description="init block with a Python block" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="PRIORITY" expression="" defaultValue="#priority number" alwaysStopAt="true"/>
+    </template>
+
+    <template name="char" value="define $CHARACTER_NAME$ = Character(&quot;$DISPLAYABLE_NAME$&quot;)" description="Create a Character" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="CHARACTER_NAME" expression="" defaultValue="character_name" alwaysStopAt="true"/>
+        <variable name="DISPLAYABLE_NAME" expression="" defaultValue="displayable name" alwaysStopAt="true"/>
+    </template>
+
+    <template name="charnvl" value="define $CHARACTER_NAME$ = Character(None, kind=nvl)&#10;$END$" description="Create a Character (NVL)" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="CHARACTER_NAME" expression="" defaultValue="character_name" alwaysStopAt="true"/>
+    </template>
+
+    <template name="transitions" value="$TRANSITIONS$" description="Predefined Transitions" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="TRANSITIONS" expression="" defaultValue="fade, dissolve, pixellate, move,&#10;moveinright (Also: moveinleft, moveintop, moveinbottom),&#10;moveoutright (Also: moveoutleft, moveouttop, moveoutbottom),&#10;ease (Also: easeinright, easeinleft, easeintop, easeinbottom, easeoutright, easeoutleft, easeouttop, easeoutbottom),&#10;zoomin, zoomout, zoominout, vpunch, hpunch, blinds, squares,&#10;wipeleft (Also: wiperight, wipeup, wipedown),&#10;slideleft (Also:  slideright, slideup, slidedown),&#10;slideawayleft (Also: slideawayright, slideawayup, slideawaydown),&#10;irisin, irisout." alwaysStopAt="true"/>
+    </template>
+
+    <template name="multipersist" value="$PERSISTENT_NAME$ = MultiPersistent(&quot;$PERSISTENT_FILENAME$&quot;)" description="Create MultiPersistent" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="PERSISTENT_NAME" expression="" defaultValue="persistent_name" alwaysStopAt="true"/>
+        <variable name="PERSISTENT_FILENAME" expression="" defaultValue="persistent_filename" alwaysStopAt="true"/>
+    </template>
+
+    <template name="var" value="$ $VARIABLE_NAME$ = $VARIABLE_VALUE$" description="Create/Modify variable." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="VARIABLE_NAME" expression="" defaultValue="variable_name" alwaysStopAt="true"/>
+        <variable name="VARIABLE_VALUE" expression="" defaultValue="# variable value" alwaysStopAt="true"/>
+    </template>
+
+    <template name="$" value="$ $VARIABLE_NAME$ = $VARIABLE_VALUE$" description="Create/Modify variable." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="VARIABLE_NAME" expression="" defaultValue="variable_name" alwaysStopAt="true"/>
+        <variable name="VARIABLE_VALUE" expression="" defaultValue="# variable value" alwaysStopAt="true"/>
+    </template>
+
+    <template name="rpause" value="$ renpy.pause($SECONDS$)&#10;$END$" description="Ren'Py pause." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="SECONDS" expression="" defaultValue="" alwaysStopAt="true"/>
+    </template>
+
+    <template name="cutscene" value="$ renpy.movie_cutscene(&quot;$FILE_NAME$&quot;)" description="Movie Cutscene" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="FILE_NAME" expression="" defaultValue="file_name.extension" alwaysStopAt="true"/>
+    </template>
+
+    <template name="persist" value="$ persistent.$ATTRIBUTE_NAME$ = $VARIABLE_VALUE$" description="Save Persistent." toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="ATTRIBUTE_NAME" expression="" defaultValue="attribute_name" alwaysStopAt="true"/>
+        <variable name="VARIABLE_VALUE" expression="" defaultValue="# variable value" alwaysStopAt="true"/>
+    </template>
+
+    <template name="multisave" value="$ $PERSISTENT_NAME$.save()" description="Save MultiPersistent" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="PERSISTENT_NAME" expression="" defaultValue="persistent_name" alwaysStopAt="true"/>
+    </template>
+
+    <template name="wFade" value="with fade" description="Fade" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="wDissolve" value="with dissolve" description="Dissolve" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="wPixel" value="with pixellate" description="Pixellate" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="wMove" value="with move" description="Move" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="wMoveInRight" value="with moveinright" description="Move in Right" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="wMoveInLeft" value="with moveinleft" description="Move in Left" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="wMoveInTop" value="with moveintop" description="Move in Top" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="wMoveInBottom" value="with moveinbottom" description="Move in Bottom" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="if" value="if $CONDITION$:&#10;&#009;$END$" description="If (Conditional Statement)" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="CONDITION" expression="" defaultValue="condition" alwaysStopAt="true"/>
+    </template>
+
+    <template name="elif" value="elif $CONDITION$:&#10;&#009;$END$" description="Else If (Conditional Statement)" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="CONDITION" expression="" defaultValue="condition" alwaysStopAt="true"/>
+    </template>
+
+    <template name="else" value="else:&#10;&#009;$END$" description="Else (Conditional Statement)" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+    </template>
+
+    <template name="while" value="while $CONDITION$:&#10;&#009;$END$" description="While (Loop)" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="CONDITION" expression="" defaultValue="condition" alwaysStopAt="true"/>
+    </template>
+
+    <template name="menu" value="menu $OPTIONAL_NAME$:&#10;&#009;&quot;$SAY_STATEMENT$&quot;&#10;&#009;&quot;$CHOICE_1$&quot;:&#10;&#009;&#009;#block of code to run&#10;&#009;&quot;$CHOICE_2$&quot;:&#10;&#009;&#009;#block of code to run&#10;&#009;$END$" description="Choice Menu" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="OPTIONAL_NAME" expression="" defaultValue="optional_name" alwaysStopAt="true"/>
+        <variable name="SAY_STATEMENT" expression="" defaultValue="Say Statement" alwaysStopAt="true"/>
+        <variable name="CHOICE_1" expression="" defaultValue="Choice 1" alwaysStopAt="true"/>
+        <variable name="CHOICE_2" expression="" defaultValue="Choice 2" alwaysStopAt="true"/>
+    </template>
+
+    <template name="choice" value="&quot;$CHOICE_N$&quot;:&#10;&#009;$END$&#10;&#009;$END$" description="Menu Choice" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="CHOICE_N" expression="" defaultValue="Choice N" alwaysStopAt="true"/>
+    </template>
+
+    <template name="dochelp" value="## Visit the site for documentation or help of Ren&#x27;Py engine. ##&#10;## Documentation:&#10;&#009;&quot;$DOC_URL$&quot;&#10;## Wiki-Old Documentation:&#10;&#009;&quot;$WIKI_URL$&quot;&#10;## Forum:&#10;&#009;&quot;$FORUM_URL$&quot;&#10;## Extension Documentation:&#10;&#009;&quot;$EXTENSION_URL$&quot;" description="Show docs/useful urls" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="RenPy" value="true"/>
+        </context>
+        <variable name="DOC_URL" expression="" defaultValue="http://www.renpy.org/doc/html/" alwaysStopAt="true"/>
+        <variable name="WIKI_URL" expression="" defaultValue="http://www.renpy.org/wiki/renpy/Wiki_Home_Page" alwaysStopAt="true"/>
+        <variable name="FORUM_URL" expression="" defaultValue="http://lemmasoft.renai.us/forums/viewforum.php?f=42" alwaysStopAt="true"/>
+        <variable name="EXTENSION_URL" expression="" defaultValue="https://github.com/LuqueDaniel/vscode-language-renpy" alwaysStopAt="true"/>
+    </template>
+</templateSet>
