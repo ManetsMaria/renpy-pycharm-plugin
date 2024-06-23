@@ -40,5 +40,4 @@
                 contextId="RenPy"
                 implementation="com.manets.renpy.snippets.RenPyContext"/>
     </extensions>
-    <depends>com.intellij.modules.pycharm</depends>
 </idea-plugin>
