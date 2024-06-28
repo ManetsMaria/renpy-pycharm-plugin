@@ -21,16 +21,7 @@
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-
-    <actions>
-        <action
-                id="EditorBasics.EditorHandlerPopup"
-                class="com.manets.renpy.handlers.EditorHandlerPopup"
-                text="Editor Add Caret"
-                description="Adds a second caret below the existing one.">
-            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-        </action>
-    </actions>
+    <depends>org.jetbrains.plugins.textmate</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
@@ -39,5 +30,6 @@
         <liveTemplateContext
                 contextId="RenPy"
                 implementation="com.manets.renpy.snippets.RenPyContext"/>
+        <textmate.bundleProvider implementation="com.manets.renpy.syntax.RenPyTextMateBundleProvider"/>
     </extensions>
 </idea-plugin>
