@@ -4,6 +4,7 @@
         <![CDATA[
     This file has been converted from https://github.com/renpy/vscode-language-renpy/blob/master/syntaxes/renpy.tmLanguage.json.
     If you want to provide a fix or improvement, please create a pull request against the original repository.
+    ALSO THIS FILE IS NOT FINISHED WITH ADAPTATION: renpy-python blocks not valid now
         ]]>
     </important_information>
 	<dict>
